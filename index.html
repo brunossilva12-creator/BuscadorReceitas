@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre receitas do mundo inteiro com ingredientes e modo de preparo.">
+    <title>Sabores do Mundo | Receitas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍲</span>
+                <span>Sabores<span class="logo-highlight"> do Mundo</span></span>
+            </a>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#pesquisa">Receitas</a>
+                <a href="#resultados">Explorar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-tag">✦ DESCUBRA NOVOS SABORES</span>
+                <h1>Uma viagem pelo mundo através da <span>gastronomia.</span></h1>
+                <p>Encontre receitas incríveis, descubra novos ingredientes e aprenda a preparar pratos de diferentes culturas.</p>
+                <a href="#pesquisa" class="hero-button">Explorar receitas <span>→</span></a>
+            </div>
+            <div class="hero-decoration">✦</div>
+        </section>
+
+        <section class="search-section container" id="pesquisa">
+            <div class="section-heading">
+                <span class="eyebrow">SEU PRÓXIMO PRATO COMEÇA AQUI</span>
+                <h2>O que vamos cozinhar hoje?</h2>
+                <p>Pesquise pelo nome de um prato ou pelo ingrediente que você tem em casa.</p>
+            </div>
+
+            <div class="search-box">
+                <div class="search-options">
+                    <label class="radio-option">
+                        <input type="radio" name="searchType" value="meal" checked>
+                        <span>🍽️ Nome do prato</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="searchType" value="ingredient">
+                        <span>🥕 Ingrediente</span>
+                    </label>
+                </div>
+
+                <form id="searchForm" class="search-form">
+                    <div class="input-wrapper">
+                        <span class="search-icon">⌕</span>
+                        <input type="text" id="searchInput" placeholder="Ex.: frango, lasanha, bolo..." autocomplete="off" required>
+                        <button type="submit" id="searchButton">Buscar receitas <span>→</span></button>
+                    </div>
+                </form>
+
+                <div class="search-bottom">
+                    <span>Não sabe o que preparar?</span>
+                    <button id="randomButton" class="random-button">🎲 Surpreenda-me com uma receita</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section container" id="resultados">
+            <div class="results-heading">
+                <div>
+                    <span class="eyebrow">INSPIRAÇÃO PARA SUA COZINHA</span>
+                    <h2 id="resultsTitle">Receitas para descobrir</h2>
+                </div>
+                <span id="resultsCount" class="results-count"></span>
+            </div>
+
+            <div id="statusMessage" class="status-message">
+                <div class="status-icon">🍽️</div>
+                <h3>Bem-vindo ao Sabores do Mundo!</h3>
+                <p>Faça uma pesquisa ou escolha uma receita aleatória para começar sua experiência gastronômica.</p>
+            </div>
+
+            <div id="recipesGrid" class="recipes-grid"></div>
+        </section>
+
+        <section class="info-section">
+            <div class="container info-content">
+                <span>🌎</span>
+                <div>
+                    <h2>Sabores que atravessam fronteiras</h2>
+                    <p>Conheça a gastronomia de diferentes países e descubra novas maneiras de preparar seus pratos favoritos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#" class="logo">
+                <span>🍲</span>
+                <span>Sabores<span class="logo-highlight"> do Mundo</span></span>
+            </a>
+            <p>Descubra, experimente e compartilhe sabores.</p>
+            <span class="copyright">© 2026 Sabores do Mundo</span>
+        </div>
+    </footer>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-modal" aria-label="Fechar">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
